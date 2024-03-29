@@ -11,7 +11,7 @@ export default function ListCart() {
     <div className="flex flex-col gap-2 mt-4">
       <table className="text-slate-400">
         <thead>
-          <tr>
+          <tr className="text-xl text-slate-100 h-12">
             <th>#</th>
             <th>Item</th>
             <th>Price</th>
@@ -24,10 +24,10 @@ export default function ListCart() {
           {cart.length
             ? cart.map((item, index) => <tr key={item.id}>
               <td className="text-center">{index + 1}</td>
-              <td>{item.name}</td>
-              <td className="text-right">{item.price}</td>
+              <td className="text-center">{item.name}</td>
+              <td className="text-center">{item.price}</td>
               <td className="text-center">{item.count}</td>
-              <td className="text-right">{item.count * item.price}</td>
+              <td className="text-center">{item.count * item.price}</td>
               <td className="text-center">
                 <DeleteButton idProduct={item.id} />
               </td>
