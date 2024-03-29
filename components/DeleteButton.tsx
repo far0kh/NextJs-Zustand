@@ -2,10 +2,13 @@ import { Product } from "@/models/product";
 import { Popover, Transition } from "@headlessui/react";
 import { TrashIcon } from "@heroicons/react/24/outline";
 import { Fragment, useState } from "react";
+import { useCartStore } from "@/store/cart";
 
 type Props = { idProduct: number }
 
 export default function DeleteButton({ idProduct }: Props) {
+  const { remove } = useCartStore();
+
   return (
     <Popover className="relative">
       {({ open, close }) => (
@@ -29,6 +32,7 @@ export default function DeleteButton({ idProduct }: Props) {
                   <button type="button"
                     className="font-semibold text-red-400 hover:bg-red-400 hover:bg-opacity-10 px-4 text-sm py-2 rounded-md"
                     onClick={() => {
+                      remove(idProduct);
                       close();
                     }}>
                     Confirm Delete
