@@ -2,7 +2,6 @@
 
 import { useCartStore } from "@/store/cart"
 import DeleteButton from "./DeleteButton";
-import { useEffect } from "react";
 
 export default function ListCart() {
   const { cart } = useCartStore();
