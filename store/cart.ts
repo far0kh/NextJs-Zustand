@@ -1,4 +1,3 @@
-// import { Product } from "@/models/product";
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
@@ -7,10 +6,6 @@ type Product = {
   name: string,
   price: number
 }
-
-// interface CartItem extends Product {
-//   count: number;
-// }
 
 type CartItem = Product & { count: number }
 

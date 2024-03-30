@@ -1,8 +1,7 @@
 import ProductCard from "@/components/ProductCard";
-import { Product } from "@/models/product";
 
 export default function Page() {
-  const products: Product[] = [
+  const products = [
     {
       id: 1,
       name: "Americano",
