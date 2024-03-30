@@ -1,10 +1,18 @@
-import { Product } from "@/models/product";
+// import { Product } from "@/models/product";
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-interface CartItem extends Product {
-  count: number;
+type Product = {
+  id: number,
+  name: string,
+  price: number
 }
+
+// interface CartItem extends Product {
+//   count: number;
+// }
+
+type CartItem = Product & { count: number }
 
 type CartStore = {
   cart: CartItem[],
