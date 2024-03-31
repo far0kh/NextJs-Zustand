@@ -1,6 +1,7 @@
 'use client'
 
-import { useCartStore } from "@/store/cart"
+// import { useCartStore } from "@/store/cart"
+import { useCartStore } from "@/store/zustand";
 import DeleteButton from "./DeleteButton";
 
 export default function ListCart() {

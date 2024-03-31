@@ -1,5 +1,6 @@
 import { TrashIcon } from "@heroicons/react/24/outline";
-import { useCartStore } from "@/store/cart";
+// import { useCartStore } from "@/store/cart";
+import { useCartStore } from "@/store/zustand";
 
 type Props = { idProduct: number }
 

@@ -2,7 +2,9 @@
 
 import Image from "next/image";
 import CoffeeImage from "@/public/coffee.png";
-import { useCartStore } from "@/store/cart";
+// import { useCartStore } from "@/store/cart";
+import { useCartStore } from "@/store/zustand";
+
 
 type Product = {
   id: number,
